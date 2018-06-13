@@ -42,27 +42,22 @@ function reverseString(string){
 // 6. Write a function called 'disemvowel' that returns the vowels from the string parameter
 function disemvowel(string){
   var vowels = "";
-  for (var i = 0; i < string.length - 1; i++) {
+  for (var i = 0; i < string.length; i++) {
     switch (string[i]) {
       case "a":
-        vowels += string[i];
-      break;
       case "e":
-        vowels += string[i];
-      break;
       case "i":
-        vowels += string[i];
-      break;
       case "o":
-        vowels += string[i];
-      break;
       case "u":
-        vowels += string[i];
       break;
       default:
+      console.log(string[i]);
+      vowels+=string[i];
+
     }
-    return vowels;
+
   }
+  return vowels;
 }
 
 // 7. Write a function called 'removeOdd' that removes all ODD number from an array
@@ -87,10 +82,10 @@ function removeEven(array){
 
 // 9. Write a function called 'longestString' that takes an array of strings and returns the string with the longest character length
 function longestString(array){
-  var longest = 0;
-  for (i = 0; i < array.length; i++){
-    if (array[i].length > longest){
-      longest = array[i].length;
+  var longest = "";
+  for (var i = 0; i < array.length; i++){
+    if (array[i].length > longest.length){
+      longest = array[i];
     }
   }
   return longest;
